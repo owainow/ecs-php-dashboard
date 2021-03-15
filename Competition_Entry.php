@@ -96,7 +96,7 @@ echo  '<li><a href="Book_Now.php?ID='. $row['Event_ID'] .' " class="button prima
 }
 //Does not allow for a user to book into the event if the closing date for entries is less than todays date
 else {
-	echo '<li><a href="#" class="button ">Closed for entries '$today2'</a></li>';
+	echo '<li><a href="#" class="button ">Closed for entries </a></li>';
 }
 //If the event status is closed then you can select the download schedule button
 if ($row['Event_Status']=="Closed"){
@@ -112,6 +112,9 @@ echo  '<ul class="actions">';
 echo  '</ul>';
 echo  '</div>';
 echo  '</section>';
+echo $today2;
+echo $today;
+echo "hello world";
 }
 mysqli_close($con);
 

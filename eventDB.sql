@@ -11,5 +11,6 @@ CREATE TABLE Events (
   Classes varchar(100),
   Cost_per_class varchar (4),
   Special_Instructions varchar(250),
+  Event_Status varchar(10),
   PRIMARY KEY (`Event_ID`)
 );

@@ -69,8 +69,8 @@ if(!$con){
 
 //Updates table so any events that are closed the status is updated to closed
 $today2 = date("yy-m-d");
-$sql = "UPDATE Events SET Event_Status='Closed' WHERE Closing_Date<='$today2'";
-$con->query($sql);
+//$sql = "UPDATE Events SET Event_Status='Closed' WHERE Closing_Date<='$today2'";
+//$con->query($sql);
 					
 
 //Displays Database information using select statements
@@ -96,7 +96,7 @@ echo  '<li><a href="Book_Now.php?ID='. $row['Event_ID'] .' " class="button prima
 }
 //Does not allow for a user to book into the event if the closing date for entries is less than todays date
 else {
-	echo '<li><a href="#" class="button ">Closed for entries</a></li>';
+	echo '<li><a href="#" class="button ">Closed for entries '$today2'</a></li>';
 }
 //If the event status is closed then you can select the download schedule button
 if ($row['Event_Status']=="Closed"){

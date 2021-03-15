@@ -107,7 +107,8 @@ $Time             =test_input($_POST["Time"]);
 $Discipline       =test_input($_POST["Discipline"]);
 $Cost             =test_input($_POST["Cost"]);
 $Instructions     =test_input($_POST["Instructions"]);
-$Classes          =implode(",",(array)$_POST["Height"]);
+$Classes          =test_input($_POST["Height"]);
+//$Classes          =implode(",",$_POST["Height"]);
 //$EventID=test_input($_POST["EventID"]);
 
 function test_input($data){

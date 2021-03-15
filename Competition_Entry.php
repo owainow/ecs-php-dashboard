@@ -112,9 +112,6 @@ echo  '<ul class="actions">';
 echo  '</ul>';
 echo  '</div>';
 echo  '</section>';
-echo $today2;
-echo $today;
-echo "hello world";
 }
 mysqli_close($con);
 

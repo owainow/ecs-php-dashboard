@@ -61,7 +61,8 @@
 </html>';
 
 //Connection to database
-$con = mysqli_connect("csmysql.cs.cf.ac.uk", "c1609359", "watoocnob2", "c1609359");
+$conn = new mysqli($_ENV["MYSQL_IP_ADDRESS"], $_ENV["MYSQL_USER"], 
+$_ENV["MYSQL_PASSWORD"],$_ENV["MYSQL_DATABASE"]);
 if(!$con){
 	die("failed to connect:" . mysqli_connect_error());
 }

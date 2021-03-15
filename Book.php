@@ -58,7 +58,7 @@
 				<p>To book in for more events please visit the bookings page</p>
 				</section>
 				<?php
-                    $conn = new mysqli($_ENV["MYSQL_IP_ADDRESS"], $_ENV["MYSQL_USER"], 
+                    $con = new mysqli($_ENV["MYSQL_IP_ADDRESS"], $_ENV["MYSQL_USER"], 
 					$_ENV["MYSQL_PASSWORD"],$_ENV["MYSQL_DATABASE"]);
                 if(!$con){
                 die("failed to connect:" . mysqli_connect_error());

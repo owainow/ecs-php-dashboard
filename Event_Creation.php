@@ -76,7 +76,7 @@ xhttp.send();
 	<p>Use the below form to create an event. For any queries view event organisers FAQ's</p>
 					
 	<?php
-	    $conn = new mysqli($_ENV["MYSQL_IP_ADDRESS"], $_ENV["MYSQL_USER"], 
+	    $con = new mysqli($_ENV["MYSQL_IP_ADDRESS"], $_ENV["MYSQL_USER"], 
 		$_ENV["MYSQL_PASSWORD"],$_ENV["MYSQL_DATABASE"]);
 
 	if(!$con){

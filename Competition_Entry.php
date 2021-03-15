@@ -91,7 +91,7 @@ echo  '<h4><b>Show Ground:</b> '. $row['Showground_Address'] .'</h4>';
 echo  '<ul class="actions">';
 
 //Only allows you to book into an event if the closing date is greater than todays date
-echo "if $row['Closing_Date']  vs $today";
+echo "if '$row['Closing_Date']'  vs '$today'";
 echo "hello world";
 if ($row['Closing_Date']<$today){
 echo  '<li><a href="Book_Now.php?ID='. $row['Event_ID'] .' " class="button primary icon">Book Now</a></li>';

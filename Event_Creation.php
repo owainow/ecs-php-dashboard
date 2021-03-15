@@ -48,7 +48,7 @@ xhttp.send();
 
 	<!-- Nav -->
 	<nav id="menu">
-	<ul class="links">
+	<ul class="links">f
 		<li><a href="index.html">Home</a></li>
 		<li><a href="Event_Creation.php">Create an Event</a></li>
 		<li><a href="Competition_Entry.php">View Competitions</a></li>
@@ -96,6 +96,7 @@ $Instructions="";
 $EventID="";
 $Classes="";
 
+
 $ShowGroundName   =test_input($_POST["ShowGroundName"]);
 $email			  =test_input($_POST["email"]);
 $ShowGroundAddress=test_input($_POST["ShowGroundAddress"]);
@@ -106,7 +107,7 @@ $Time             =test_input($_POST["Time"]);
 $Discipline       =test_input($_POST["Discipline"]);
 $Cost             =test_input($_POST["Cost"]);
 $Instructions     =test_input($_POST["Instructions"]);
-$Classes          =implode(",",$_POST["Height"]);
+$Classes          =implode(",",(array)$_POST["Height"]);
 //$EventID=test_input($_POST["EventID"]);
 
 function test_input($data){

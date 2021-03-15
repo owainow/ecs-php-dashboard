@@ -61,7 +61,7 @@
 
 				// Escape user inputs for security
 				//$EventID = mysqli_real_escape_string($con, $_REQUEST['EventID']);
-				$EventID           = uniqid(Event);
+				$EventID           = uniqid(ECS-Event);
 				$ShowGroundName    = mysqli_real_escape_string($con, $_REQUEST['ShowGroundName']);
 				$email 			   = mysqli_real_escape_string($con, $_REQUEST['email']);
 				$ShowgroundAddress = mysqli_real_escape_string($con, $_REQUEST['ShowGroundAddress']);
@@ -169,3 +169,13 @@
 
 </body>
 				</html>
+
+
+
+
+
+
+
+				//Warning: Use of undefined constant Event - assumed 'Event' (this will throw an Error in a future version of PHP) in /opt/app-root/src/Submit.php on line 64
+
+//Warning: mysqli_real_escape_string() expects parameter 2 to be string, array given in /opt/app-root/src/Submit.php on line 73

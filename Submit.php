@@ -57,11 +57,11 @@
                 if(!$con){
                 die("failed to connect:" . mysqli_connect_error());
 				}
-				
+				define('event', 'event');  
 
 				// Escape user inputs for security
 				//$EventID = mysqli_real_escape_string($con, $_REQUEST['EventID']);
-				$EventID           = uniqid(ECS-Event);
+				$EventID           = uniqid("event");
 				$ShowGroundName    = mysqli_real_escape_string($con, $_REQUEST['ShowGroundName']);
 				$email 			   = mysqli_real_escape_string($con, $_REQUEST['email']);
 				$ShowgroundAddress = mysqli_real_escape_string($con, $_REQUEST['ShowGroundAddress']);

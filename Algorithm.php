@@ -264,7 +264,7 @@
 															and NOT EXISTS (SELECT * FROM 2ft6$ID_Parameter); 
 															"; 
 															}
-															$con->query($query121);
+															$con->query($query12);
 
 
 
@@ -292,7 +292,10 @@
 				$event_time = $class2time; 
 				$time_block =$Count_Rows2ft6;
 				$event_length = 3; // minutes 	
-									
+				if (!$Riders13)	{
+					echo "No players";
+				}	
+				else{			
 				foreach($Riders13 as $rider){
 					unset($query14);
 							$id=$rider;
@@ -302,6 +305,7 @@
 								$eTime = strtotime($event_time);
 								$eTime = strtotime("+$event_length minutes", $eTime);
 								$event_time = date('H:i:s', $eTime);
+				                   }       
 						
 								}
 							
@@ -338,7 +342,7 @@
 															WHERE Classes like '%2ft9%'
 															and NOT EXISTS (SELECT * FROM 2ft9$ID_Parameter)"; 
 															}
-															$con->query($query161);
+															$con->query($query16);
 
 
 
@@ -366,7 +370,10 @@
 				$event_time = $class3time; 
 				$time_block =$Count_Rows2ft9;
 				$event_length = 3; // minutes 	
-									
+				if (!$Riders17)	{
+					echo "No players";
+				}	
+				else{						
 				foreach($Riders17 as $rider){
 					unset($query18);
 							$id=$rider;
@@ -377,6 +384,7 @@
 								$event_time = date('H:i:s', $eTime);
 						
 								}
+							}
 							
 
 
@@ -406,16 +414,21 @@
 															WHERE Classes like '%3ft0%'
 															and NOT EXISTS (SELECT * FROM 3ft0$ID_Parameter)"; 
 															}
-															$con->query($query201);
+															$con->query($query20);
 
 
 
 				//query to store rider_id in an array												
 				$query21 = "SELECT Rider_ID FROM $ID_Parameter where Classes like '%3ft0%'"; 
 				$result21 = mysqli_query($con,$query21);
+				if (!$result21)	{
+					echo "No players";
+				}	
+				else{	
 				while($row = mysqli_fetch_assoc($result21)){
 				$Riders21[]=$row['Rider_ID'];
 				}
+			}
 
 
 

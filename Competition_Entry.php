@@ -73,10 +73,7 @@ if(!$con){
 $today2 = date("yy-m-d");
 $sql = "UPDATE Events SET Event_Status='Closed' WHERE Closing_Date=>'$today2'";
 $con->query($sql);
-
-echo $today2;
-echo $today;
-echo "hello world";					
+			
 
 //Displays Database information using select statements
 $query = "SELECT * FROM Events"; 
